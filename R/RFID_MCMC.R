@@ -1,5 +1,5 @@
 #' @title The Gibbs sampler for RFID with fixed K
-#' @description MCMC main function for RFID with fixed number of subclones
+#' @description MCMC main function for RFID with fixed number of cell types
 #' @param Y observed count matrix
 #' @param Init an Init object used for initializing the Markov chain
 #' @param hyper the hyperparameters for the MCMC
@@ -7,7 +7,6 @@
 #' @param nmc number of post-burn-in iterations
 #' @param K number of cell types
 #' @param Print_Iter logical variable indicating whether or not to print the number of current iteration
-#' @param lab_switch.check logical variable indicating whether label switching phenomenon is checked
 #' @return mcmc an mcmc object for RFID
 
 RFID_MCMC<-function(Y, Init, hyper, B, nmc, K, Print_Iter = FALSE, lab_switch.check = FALSE){
